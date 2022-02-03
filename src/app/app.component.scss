@@ -5,6 +5,10 @@ header {
     align-items: center;
 }
 
+h1, h2, h3, h4 ,h5, h6 {
+    margin: 0;
+}
+
 ul{
     display: flex;
 
@@ -20,4 +24,52 @@ ul > list:last-child{
 }
 a {
     text-decoration: none;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 5px 10px rgba(204, 204, 204, 0.31);
+
+    h1{
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .avatar-image{
+        position: relative;
+        margin: 0px;
+        width: 60px;
+        height: 60px;
+        
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    
+        i{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    
+    }
+
+    .profile-options-list {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+
+        li{
+            margin: 9px 0;
+            padding: 0px;
+
+            a{
+                color: rgb(58, 56, 56);
+            }
+
+        }
+    }
 }
