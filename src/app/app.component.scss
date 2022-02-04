@@ -33,6 +33,9 @@ a {
 }
 
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
   background-color: #fff;
   padding: 10px 0;
   box-shadow: 0 5px 10px rgba(204, 204, 204, 0.31);
@@ -60,7 +63,9 @@ header {
       left: 0px;
     }
   }
+}
 
+.modal {
   .profile-options-list {
     display: flex;
     flex-direction: column;
@@ -79,6 +84,7 @@ header {
 }
 
 main {
+  padding-top: 120px;
   .buscador {
     div button {
       background-color: $primary;
@@ -108,7 +114,6 @@ main {
   }
 
   .pedido {
-
     margin: 15px 0px;
     border-radius: 6px;
     box-shadow: 0px 2px 6px #9f9494;
@@ -121,9 +126,31 @@ main {
 
     .description {
       padding: 10px;
-      color: $primary;
-      overflow: hidden;
-      
+      color: rgb(156, 144, 144);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .tags {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+
+        span {
+          background-color: $primary;
+          border-radius: 10px;
+          color: white;
+          display: flex;
+          padding: 2px 6px;
+          font-size: 12px;
+          margin: 0px 5px;
+        }
+      }
+
       p {
         padding: 0px;
         margin: 0px;
@@ -131,12 +158,23 @@ main {
       }
 
       h4 {
-        font-weight: 500px;
-        margin: 5px 0;
+        padding-top: 10px;
+        font-weight: 400px;
+        font-size: 20px;
+        
       }
-    }
-    .rating {
-        margin-top: 10px;
+
+      .price {
+        position: absolute;
+        right: 10px;
+        bottom: 50%;
+        font-size: 18px;
+      }
+
+      .rating {
+        margin: 10px 0px;
+        color: yellow;
+      }
     }
   }
 }
